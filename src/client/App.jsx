@@ -21,8 +21,7 @@ class Form extends React.Component {
     render() {
         var createTask = () => {
             console.log("a task is created!");
-            this.setState({list:event.target.value})
-            console.log(this.state.list);
+            this.setState({list: this.state.word})
         }
 
         console.log("rendering");
@@ -30,6 +29,7 @@ class Form extends React.Component {
           <div>
 
             <p>{this.state.word}</p>
+            <p>{this.state.list}</p>
             <input onChange={(event)=>{this.changeHandler(event);}}/>
             <button onClick={createTask}>Create Task</button>
           </div>
